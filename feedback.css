@@ -1,0 +1,130 @@
+
+
+/*General page styling*/
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f2f4f8;
+    margin: 0;
+    padding: 20px;
+}
+
+/*Main heading*/
+
+h1{
+    text-align: center;
+    color: darkblue;
+    font-size: 30px;
+}
+
+/*Form labels*/
+
+label{
+    font-weight: bold;
+    color: darkblue;
+    font-size: 16px;
+}
+
+/*input fields, dropdown and comments*/
+
+input,select,textarea{
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #f2f4f8;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/*input focus effect*/
+
+input:focus, select:focus, textarea:focus{
+    border-color: #f2f4f8;
+    outline: 2px #3366cc;
+}
+
+/*Comment box*/
+textarea{
+    resize: vertical;
+}
+
+/*General button styling*/
+button{
+    padding: 10px 25px;
+    border: black;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/*Submit button*/
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color:white;
+}
+
+/*Clear button*/
+
+button[type="reset"] {
+    background-color: #777777;
+    color: white;
+}
+
+/*Back to home link*/
+
+a{
+    color: #3366cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*link hover effect*/
+a:hover{
+    text-decoration: underline;
+
+}
+
+
+/*Responsive design for mobile devices*/
+
+@media screen and (max-width:600) {
+    body{
+        padding: 10px;
+    }
+    h1{
+        font-size: 24px;
+    }
+    form{
+        padding: 15px;
+    }
+    button{width: 100%;
+    margin-top: 10px;
+}
+} 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
