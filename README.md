@@ -10,7 +10,6 @@ This project is an updated version of my Lab 1 personal portfolio website. I hav
 **Grade 3**
 
 ## How to Run
-
 1. Download or clone this project repository.
 2. Open the downloaded project folder.
 3. Open `index.html` in a web browser.
