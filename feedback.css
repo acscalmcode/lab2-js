@@ -3,7 +3,7 @@
 /*General page styling*/
 
 body{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #f2f4f8;
     margin: 0;
     padding: 20px;
@@ -13,16 +13,23 @@ body{
 
 h1{
     text-align: center;
-    color: darkblue;
-    font-size: 30px;
+    color: #333333;
 }
 
 /*Form labels*/
 
+form {
+max-width: 500px;
+margin: 20px auto;
+padding: 30px;
+background-color: white;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1)
+}
+
 label{
     font-weight: bold;
-    color: darkblue;
-    font-size: 16px;
+    color: #333333;
 }
 
 /*input fields, dropdown and comments*/
@@ -31,22 +38,80 @@ input,select,textarea{
     width: 100%;
     padding: 10px;
     margin-top: 8px;
-    border: 1px solid #f2f4f8;
+    border: 2px solid #999999;
+    border-radius: 5px;
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 16px;
+    transition: border-color 0.3s;
 }
+
+select:invalid{
+    color: gray;
+}
+select option{
+    color: black;
+}
+
 
 /*input focus effect*/
 
 input:focus, select:focus, textarea:focus{
     border-color: #f2f4f8;
     outline: 2px #3366cc;
+    outline-offset: 2px;
 }
+
+
+/*Error state*/
+.error{
+    border-color: #cc0000;
+}
+
+
+/*Valid state*/
+.valid{
+    border-color: #008000;
+}
+ 
+
+/*Error message*/
+.error-message{
+    display: block;
+    color: #cc0000;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+
 
 /*Comment box*/
 textarea{
     resize: vertical;
 }
+
+
+/*Character counter*/
+#counter{
+    font-size: 14px;
+    color: #cc0000;
+    margin-top: 5px;
+}
+
+#counter.enough {
+    color: #080000;
+}
+
+
+/*Success message*/
+#successMessage{
+    color: #008000;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
 
 /*General button styling*/
 button{
@@ -55,21 +120,41 @@ button{
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
+
 
 /*Submit button*/
 
 button[type="submit"] {
-    background-color: #4CAF50;
+    background-color:#287d32;
     color:white;
 }
+
+button[type="submit"]:hover{
+    background-color: #1b5e20;
+}
+
 
 /*Clear button*/
 
 button[type="reset"] {
-    background-color: #777777;
+    background-color: #666666;
     color: white;
 }
+
+button[type="reset"]:hover{
+    background-color:#444444;
+}
+
+
+/*Keyboard focus for button and link*/
+button:focus-visible, a:focus-visible{
+    outline:2px solid #3366cc;
+    outline-offset: 3px;
+}
+
+
 
 /*Back to home link*/
 
