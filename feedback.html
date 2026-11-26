@@ -4,43 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio Feedback</title>
+    <link rel="stylesheet" href="feedback.css">
 </head>
+
 <body>
     <h1>My Portfolio Feedback</h1>
-    <link rel="stylesheet" href="feedback.css">
-    <form>
+    <a href="index.html">Back to Home</a>
+    
+    <form id="feedbackform" novalidate>
+
         <label for="fullname">Full Name: </label><br>
-        <input type="text" id="fullname" name="fullname" required>
+        <input type="text" id="fullname" name="fullname" 
+        required minlength="2"
+        aria-describedby="nameError">
+        <small id="nameError" class="error-message"></small>
         <br><br>
+
 
         <label for="email">Email: </label><br>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" 
+        required aria-describedby="emailError">
+        <small id="emailError" class="error-message"></small>
         <br><br>
 
+
         <label for="topic">Topic of Interest: </label><br>
-        <select id="topic" name="topic"></select>
+        <select id="topic" name="topic"
+        required aria-describedby="topicError">
+
         <option value="">Select a topic</option>
         <option value="design">Website Design</option>
         <option value="projects">Projects</option>
         <option value="skills">Skills</option>
         <option value="other">other</option>
-    </select>
+        </select>
+        <small id="topicError" class="error-message"></small>
         <br><br>
+
 
         <lable for="comments">Comments:</lable><br>
-        <textarea id="comments" name="comments" rows="5" cols="30"></textarea>
+        <textarea id="comments" name="comments" rows="5" 
+        required minlength="15"
+        aria-describedby="commentsError counter"></textarea>
+        <small id="commentsError" class="error-message"></small>
+        <p id="counter">0 characters - minimum 15 required </p>
+        <br>
+
+
+        <lable for="website">Website (Optional):</lable><br>
+        <input type="url" id="website" name="website"
+        aria-describedby="websiteError">
+        <small id="websiteError" class="error-message"></small>
         <br><br>
 
-        <lable for="website">Website:</lable><br>
-        <input type="url" id="website" name="website">
-        <br><br>
 
         <button type="submit">Submit</button>
         <button type="reset">Clear</button>
-
+        <p id="successMessage" role="status"></p>
 
     </form>
-    <a href="index.html">Back to Home</a>
+    
     
 </body>
 </html>
